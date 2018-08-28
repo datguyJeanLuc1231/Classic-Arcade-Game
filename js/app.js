@@ -9,6 +9,23 @@ class Hero {
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
+    //Updating the hero's x and y position based on input
+    handleInput(input) {
+        switch(input) {
+            case 'left':
+                this.x -= 20;
+                break;
+            case 'up':
+                this.y -= 20;
+                break;
+            case 'right':
+                this.x += 20;
+                break;
+            case 'down':
+                this.y += 20;
+                break;
+        }
+    }
 }
 
 // Initialize the player object
