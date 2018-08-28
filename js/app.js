@@ -1,28 +1,44 @@
 class Hero {
     constructor() {
+        this.sprite = 'images/char-boy.png';
+        this.xJump = 101;
+        this.yJump = 83;
         this.x = 0;
         this.y = 0;
-        this.sprite = 'images/char-boy.png';
+        // The starting position coordinates for the hero
+        this.startX = this.xJump * 2;
+        this.startY = (this.yJump * 5) - 20; // The subtracting 20 adds some padding for the hero
+        this.x = this.startX;
+        this.y = this.startY;
     }
 
     // Creating hero on the starting position
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
-    //Updating the hero's x and y position based on input
+    // Updating the hero's x and y position based on input
+    // The if statements create the boundaries for the hero
     handleInput(input) {
         switch(input) {
             case 'left':
-                this.x -= 20;
+                if (this.x > 0) {
+                    this.x -= this.xJump;
+                }
                 break;
             case 'up':
-                this.y -= 20;
+                if (this.y > 0) {
+                    this.y -= this.yJump;
+                }
                 break;
             case 'right':
-                this.x += 20;
+                if (this.x < this.xJump * 4) {
+                    this.x += this.xJump;
+                }
                 break;
             case 'down':
-                this.y += 20;
+                if (this.y < this.yJump * 4) {
+                    this.y += this.yJump;
+                }
                 break;
         }
     }
