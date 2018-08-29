@@ -1,8 +1,8 @@
 class Hero {
     constructor() {
         this.sprite = 'images/char-boy.png';
-        this.xJump = 101;
-        this.yJump = 83;
+        this.xJump = 101; // horizontal movement
+        this.yJump = 83; // vertical movement
         this.x = 0;
         this.y = 0;
         // The starting position coordinates for the hero
@@ -17,7 +17,7 @@ class Hero {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
     // Updating the hero's x and y position based on input
-    // The if statements create the boundaries for the hero
+    // The if statements create the boundaries for the game stage
     handleInput(input) {
         switch(input) {
             case 'left':
@@ -46,39 +46,18 @@ class Hero {
 
 // Initialize the player object
 const player = new Hero();
-    // Constructor
-        // Properties
-            // x position
-            // y position
-            // Sprite image
-        // Methods
-            // Update position
-                // Check for collision here
-                    // Did player x and y collide with enemy?
-                // Check win here?
-                    // Did player x and y reach final tile?
-            // Render 
-                // Draw player sprite on current x and y coord position
-            // Handle keyboard input
-                // Update player's x and y property according to input
-            // Reset hero
-                // Set x and y to starting x and y
-
-
-
 
 // Enemies our player must avoid
 let Enemy = function() {
-    // Variables applied to each of our instances go here,
-    // we've provided one for you to get started
-
-    // x position
-    // y position
-
-    // The image/sprite for our enemies, this uses
-    // a helper we've provided to easily load images
+    this.x = 0;
+    this.y = 0;
     this.sprite = 'images/enemy-bug.png';
 };
+
+// Initialize the enemy object
+const ladyBug1 = new Enemy();
+const allEnemies = [];
+allEnemies.push(ladyBug1);
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
