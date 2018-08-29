@@ -49,9 +49,11 @@ const player = new Hero();
 
 // Enemies our player must avoid
 let Enemy = function() {
+    this.sprite = 'images/enemy-bug.png';
     this.x = 0;
     this.y = 0;
-    this.sprite = 'images/enemy-bug.png';
+    this.xJump = 101;
+    this.outOfBounds = this.xJump * 5;
 };
 
 // Initialize the enemy object
@@ -62,13 +64,12 @@ allEnemies.push(bug1);
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
-    // You should multiply any movement by the dt parameter
-    // which will ensure the game runs at the same speed for
-    // all computers.
-
     // If enemy is not passed boundary
+    if(this.x < this.outOfBounds) {
         // Move forward
         // Increment x by speed * dt (delta time)
+        this.x += 200 * dt;
+    }
     // else
         // Reset position to start
 };
