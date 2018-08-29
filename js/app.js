@@ -55,9 +55,9 @@ let Enemy = function() {
 };
 
 // Initialize the enemy object
-const ladyBug1 = new Enemy();
+const bug1 = new Enemy();
 const allEnemies = [];
-allEnemies.push(ladyBug1);
+allEnemies.push(bug1);
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
