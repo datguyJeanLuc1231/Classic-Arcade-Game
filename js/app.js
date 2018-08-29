@@ -44,22 +44,27 @@ class Hero {
     }
 }
 
-// Initialize the player object
-const player = new Hero();
-
 // Enemies our player must avoid
-let Enemy = function() {
+let Enemy = function(x, y, speed) {
     this.sprite = 'images/enemy-bug.png';
-    this.x = 0;
-    this.y = 0;
+    this.x = x;
+    this.y = y + 60; // Centering the enemy to the tile
+    this.speed = speed;
     this.xJump = 101;
     this.outOfBounds = this.xJump * 5;
+    this.resetPosition = -this.xJump;
 };
 
-// Initialize the enemy object
-const bug1 = new Enemy();
-const allEnemies = [];
-allEnemies.push(bug1);
+// Initialize the player and enemy objects
+const player = new Hero(),
+    bug1 = new Enemy(-101, 0, 200),
+    bug2 = new Enemy(-101, 83, 85),
+    bug3 = new Enemy((-101*3.5), 83, 350),
+    bug4 = new Enemy((-101* 2.3), (83*2), 233),
+    bug5 = new Enemy(-101, 0, 300),
+    bug6 = new Enemy((-101*2), (83*2), 175),
+    allEnemies = [];
+allEnemies.push(bug1, bug2, bug3, bug4, bug5, bug6);
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -68,10 +73,13 @@ Enemy.prototype.update = function(dt) {
     if(this.x < this.outOfBounds) {
         // Move forward
         // Increment x by speed * dt (delta time)
-        this.x += 200 * dt;
+        this.x += this.speed * dt;
     }
-    // else
+    else {
         // Reset position to start
+        this.x = this.resetPosition;
+    }
+        
 };
 
 // Draw the enemy on the screen, required method for game
