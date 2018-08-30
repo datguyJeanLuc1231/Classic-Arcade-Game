@@ -2,8 +2,6 @@
 
 This is my Frogger clone for Udacity's Front-End Web Development NanoDegree
 
-<img src="images/demo.png" alt="Demo image" height="500" width= "500">
-
 
 ## Creator Notes
 * Creaing this game used my knowledge of object-orientated programming using `JavaScript`.
