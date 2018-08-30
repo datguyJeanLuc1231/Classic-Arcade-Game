@@ -5,11 +5,13 @@ This is my Frogger clone for Udacity's Front-End Web Development NanoDegree
 ## Creator Notes
 * Creaing this game used my knowledge of object-orientated programming using `JavaScript`.
 * Styling using `CSS`, with `font-awesome` emojis, and the Google font `Fredoka One` 
+* As with any project of mine, when my skills increase, I will come back and make some improvements on the game.
 
 
 ## Installation 
 * Download or clone the repository to your device
 * Once you unzipped the folder, open the `index.html` file to begin playing.
+* Or if you don't feel like it, you can just click on this link here: https://github.com/datguyJeanLuc1231/Classic-Arcade-Game
 
 ## How to play
 1) Use your arrow keys to move the hero around the board
