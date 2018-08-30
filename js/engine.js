@@ -22,7 +22,10 @@ let Engine = (function(global) {
         win = global.window,
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
-        lastTime;
+        lastTime,
+        frame;
+    const modal = document.querySelector('.modal-bg'),
+          replay = document.querySelector('.modal-btn');
 
     canvas.width = 505;
     canvas.height = 606;
@@ -55,7 +58,11 @@ let Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
-        win.requestAnimationFrame(main);
+        if (player.victory === true) {
+            win.cancelAnimationFrame(frame);
+        } else { 
+            frame = win.requestAnimationFrame(main);
+        }
     }
 
     /* This function does some initial setup that should only occur once,

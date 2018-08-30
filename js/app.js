@@ -12,6 +12,7 @@ class Hero {
         this.startY = (this.yJump * 4) + 60; // The subtracting 20 adds some padding for the hero
         this.x = this.startX;
         this.y = this.startY;
+        this.victory = false;
     }
     // Creating hero on the starting position
     render() {
@@ -43,12 +44,22 @@ class Hero {
                 break;
         }
     }
+    // Reset hero after getting hit by adnormally big bug
+    reset() {
+        this.y = this.startY;
+        this.x = this.startX;
+    }
+
     // Checks for collision on the x axis and y-axis
     update() {
         for(let enemy of allEnemies) {
             if (this.y === enemy.y && (enemy.x + enemy.xJump/2 > this.x && enemy.x < this.x + this.xJump/2) ) {
                 this.reset();
             }
+        }
+        // Checks if the hero reached the river of safety
+        if(this.y === 60) {
+            this.victory = true;
         }
     }
 }
