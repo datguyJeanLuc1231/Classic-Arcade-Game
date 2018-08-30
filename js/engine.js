@@ -24,8 +24,15 @@ let Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime,
         frame;
-    const modal = document.querySelector('.modal-bg'),
+    const modal = document.querySelector('.modal-background'),
           replay = document.querySelector('.modal-btn');
+
+    replay.addEventListener('click', function() {
+        modal.classList.toggle('hide');
+        player.reset();
+        player.victory = false;
+        win.requestAnimationFrame(main);
+    })
 
     canvas.width = 505;
     canvas.height = 606;
@@ -60,6 +67,7 @@ let Engine = (function(global) {
          */
         if (player.victory === true) {
             win.cancelAnimationFrame(frame);
+            modal.classList.toggle('hide');
         } else { 
             frame = win.requestAnimationFrame(main);
         }

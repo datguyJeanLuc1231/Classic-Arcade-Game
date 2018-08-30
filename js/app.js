@@ -58,7 +58,7 @@ class Hero {
             }
         }
         // Checks if the hero reached the river of safety
-        if(this.y === 60) {
+        if(this.y < 60) {
             this.victory = true;
         }
     }
