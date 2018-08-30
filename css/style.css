@@ -1,3 +1,55 @@
 body {
     text-align: center;
 }
+
+.modal-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.420);
+    background-size: cover;
+}
+
+.modal-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid darkgray;
+}
+
+.modal-body {
+    position: relative;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    background: white;
+    border-radius: 10px;
+    transform: translate(-50%, -65%);
+    color: darkgrey;
+}
+
+.modal-close {
+    font-size: 2rem;
+}
+
+.modal-btn {
+    width: 60px;
+    height: 45px;
+    border-radius: 10px;
+    padding: 0.3rem;
+    cursor: pointer;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.hide {
+    display: none;
+}
