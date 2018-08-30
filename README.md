@@ -2,7 +2,7 @@
 
 This is my Frogger clone for Udacity's Front-End Web Development NanoDegree
 
-![image](images/demo.png)
+<img src="images/demo.png" alt="Demo image" height="500" width= "500">
 
 
 ## Creator Notes
