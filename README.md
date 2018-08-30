@@ -1,6 +1,17 @@
-frontend-nanodegree-arcade-game
-===============================
+# Arcade Game Clone Project
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+This is my Frogger clone for Udacity's Front-End Web Development NanoDegree
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Creator Notes
+* Creaing this game used my knowledge of object-orientated programming using `JavaScript`.
+* Styling using `CSS`, with `font-awesome` emojis, and the Google font `Fredoka One` 
+
+
+## Installation 
+* Download or clone the repository to your device
+* Once you unzipped the folder, open the `index.html` file to begin playing.
+
+## How to play
+1) Use your arrow keys to move the hero around the board
+2) Avoid the overgrown bugs that even King Kong and Godzilla would be afraid of, or you die. 
+3) You need to get to river at the top to win.
