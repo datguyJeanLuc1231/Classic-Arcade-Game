@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    font-family: 'Fredoka One', cursive;
 }
 
 .modal-background {
@@ -16,7 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
     border-bottom: 1px solid darkgray;
 }
 
@@ -28,10 +29,12 @@ body {
     background: white;
     border-radius: 10px;
     transform: translate(-50%, -65%);
-    color: darkgrey;
+    color: white;
+    background-color: rgb(107, 106, 106, 0.8);
 }
 
-.modal-close {
+.far, .fas {
+    color: yellow;
     font-size: 2rem;
 }
 
@@ -41,6 +44,9 @@ body {
     border-radius: 10px;
     padding: 0.3rem;
     cursor: pointer;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    background-color:gold;
 }
 
 .modal-footer {
